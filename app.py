@@ -36,5 +36,9 @@ def criar_usuario():
     usuario = insert_user(nome, email) 
     return f"Dados recebidos!"
 
+@app.route("/teste" , methods=["GET"])
+def render_test():
+    return f"Rende att"
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0",port = os.environ.get("PORT" , 3000) ,debug=True)
